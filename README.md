@@ -11,7 +11,7 @@ explorePy is a python package loaded with methods to help explore and explain th
 #### Functions
 
 ###### Function 1 | Variable summary
-The fucntion will take a pandas data frame as input and provide the total quantity of each type of variable present in the data frame. The output of the function will be a dataframe and will have one row for each variable type with it's corresponding quantity. The function will look to identify 6 different types of variables: numerical, categorical, boolean, text(unique), date, and an others category
+The function will take a pandas data frame as input and provide the total quantity of each type of variable present in the data frame. The output of the function will be a dataframe and will have one row for each variable type with it's corresponding quantity. The function will look to identify 6 different types of variables: numerical, categorical, boolean, text(unique), date, and an others category
 
 ###### Function 2 | Missing values per variable
 For each column/variable in the panadas dataframe, this function will count the number missing values present and report back on that number per column. The function will accept a dataframe as input and, output a corresponding dataframe with the above information detailing the counts of missing values per column/variable
