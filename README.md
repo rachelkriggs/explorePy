@@ -29,7 +29,7 @@ The following are existing functions in Python and R that are similar to those d
 
 ###### R
  [dim()](https://www.rdocumentation.org/packages/base/versions/3.5.2/topics/dim): used to obtain the shape of a dataframe.   
-[ncol()](https://www.rdocumentation.org/packages/base/versions/3.5.2/topics/nrow) and [nrow()](https://www.rdocumentation.org/packages/base/versions/3.5.2/topics/nrow)': used to get the number of rows and columns in a dataframe.       
+[ncol()](https://www.rdocumentation.org/packages/base/versions/3.5.2/topics/nrow) and [nrow()](https://www.rdocumentation.org/packages/base/versions/3.5.2/topics/nrow): used to get the number of rows and columns in a dataframe.       
 [str()](https://www.rdocumentation.org/packages/utils/versions/3.5.2/topics/str): provides summary information about the dataframe, including some of the same information as above (i.e. dim, ncol and nrow). str() provides descriptive information about variable and data types in the dataframe.   
 [is.na()](https://www.statmethods.net/input/missingdata.html): provides the number of missing values in the columns of the data frame.
 
