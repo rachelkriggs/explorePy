@@ -4,7 +4,7 @@ The members of the team  are (Arzan, Jim, Milos, Rachel )
 
 will be abiding by the code of conduct in regards to the communication between members in this project.   
 
-[code of conduct]:https://github.com/UBC-MDS/explorePy/blob/master/CONDUCT.md
+[code of conduct](https://github.com/UBC-MDS/explorePy/blob/master/CONDUCT.md)
 
 
 ## Pull Request Process guidelines
@@ -16,25 +16,29 @@ will be abiding by the code of conduct in regards to the communication between m
 
 ## Code of Conduct
 
-[code of conduct]: https://github.com/UBC-MDS/explorePy/blob/master/CONDUCT.md
+[code of conduct](https://github.com/UBC-MDS/explorePy/blob/master/CONDUCT.md)
 
-## Scope of Individual Responsibility
+## Scope of Individual Responsibility (For now)
 
 #### Arzan:
 
 > I will be working on the following
+I will be focusing on writing Python version of specific functions
 
 #### Jim:
 
 > I will be working on the following
+I will be focusing on writing R version of specific functions
 
 #### Milos:
 
 > I will be working on the following
+I will be focusing on writing Python version of specific functions
 
 #### Rachel:
 
 > I will be working on the following
+I will be focusing on writing R version of specific functions
 
 
 
