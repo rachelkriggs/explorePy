@@ -5,8 +5,7 @@ def functionality(x):
     """
     creates a toy data frame for testing purposes
 
-    inputs
-    ______
+    inputs:
     x: numpy array containing characters, numbers and booleans
 
     returns:

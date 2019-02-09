@@ -6,8 +6,7 @@ def missing_values(x):
     """
     counts the number of missing values present in a data frame and reports back number and percent missing for each variable
 
-    inputs
-    ______
+    inputs:
     x: data frame
 
     returns:

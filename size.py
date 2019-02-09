@@ -7,8 +7,7 @@ def size(x):
     """
     takes in a dataframe and prints the shape and size of the dataframe
 
-    inputs
-    ______
+    inputs:
     x: data frame
 
     returns:
