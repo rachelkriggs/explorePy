@@ -39,9 +39,9 @@ def missing_values(x):
 
     # Create the dataframe to report the results
     result_df = pd.DataFrame()
-    result_df["Columns"] = name_of_columns
-    result_df["# of NAs"] = number_of_nas
-    result_df["Pecent NAs"] = percent_of_nas
+    result_df["columns"] = name_of_columns
+    result_df["no_of_missing_vals"] = number_of_nas
+    result_df["perecent_missing_vals"] = percent_of_nas
 
 
     return result_df
