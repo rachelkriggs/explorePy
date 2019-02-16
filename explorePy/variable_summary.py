@@ -2,7 +2,8 @@ import numpy as np
 import pandas as pd
 
 
-def variable_summary(frames):
+
+def variable_summary2(frames):
     """
     takes a data frame as input and provides the total quantity of each type of variable present in the data frame
     inputs:
@@ -14,11 +15,12 @@ def variable_summary(frames):
     #pandas data types
     #https://pbpython.com/pandas_dtypes.html
 
+    #holds the list of values of the column names
     cols = list(frames.columns.values)
+    #holds the number for column length
     col_len = len(cols)
 
-
-    cols2 = frames.shape[1]
+    #holds the number of columns of each variable type
 
     int_count = 0
     char_count = 0
@@ -29,30 +31,27 @@ def variable_summary(frames):
     for i in range (0, col_len):
         if frames[cols[i]].dtype == np.int64:
         #if np.issubdtype(frames[cols[i]].dtype, np.number) == True:
-            int_count = int_count + len(frames[cols[i]])
+            int_count = int_count + 1
         elif frames[cols[i]].dtype == np.object:
-            char_count = char_count + len(frames[cols[i]])
+            char_count = char_count + 1
         elif frames[cols[i]].dtype == np.bool:
-            bool_count = bool_count + len(frames[cols[i]])
+            bool_count = bool_count + 1
         elif frames[cols[i]].dtype == np.datetime64:
-            date_count = date_count + len(frames[cols[i]])
+            date_count = date_count + 1
         else:
-            other_count = other_count + len(frames[cols[i]])
+            other_count = other_count + 1
     print(char_count)
 
     result_df = pd.DataFrame({'rows': "count",
                                   'columns' : [int_count],
                                   'size_in_byes' : [char_count]})
 
-    #I left this option to maybe print out a np array
-    data2 = np.array([['variable type','count'],
-                    ['numeric',int_count],
-                    ['character',char_count],
-                    ['boolean',bool_count],
-                    ['date',date_count],
-                    ['other',other_count]])
 
-    #or print out
-    frames2 = pd.DataFrame(np.atleast_2d(data2))
-    print(frames2)
-    return frames.variable_summary()
+
+    data3 = pd.DataFrame({'Variable type': ["numeric","character", "boolean","date","other"], 'count': [int_count, char_count, bool_count, date_count,other_count] })
+
+
+
+    #print out a data frame
+
+    print(data3)
