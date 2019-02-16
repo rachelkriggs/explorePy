@@ -38,14 +38,10 @@ def variable_summary2(frames):
             other_count = other_count + 1
     print(char_count)
 
-    result_df = pd.DataFrame({'rows': "count",
-                                  'columns' : [int_count],
-                                  'size_in_byes' : [char_count]})
 
 
+    result_df = pd.DataFrame({'Variable type': ["numeric","string", "boolean","date","other"], 'count': [int_count, char_count, bool_count, date_count,other_count] })
 
-    data = pd.DataFrame({'Variable type': ["numeric","string", "boolean","date","other"], 'count': [int_count, char_count, bool_count, date_count,other_count] })
+    #print out a data frame of the summary results
 
-    #print out a data frame
-
-    print(data)
+    print(result_df)
