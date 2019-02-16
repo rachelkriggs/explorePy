@@ -30,7 +30,6 @@ def variable_summary2(frames):
 
     for i in range (0, col_len):
         if frames[cols[i]].dtype == np.int64:
-        #if np.issubdtype(frames[cols[i]].dtype, np.number) == True:
             int_count = int_count + 1
         elif frames[cols[i]].dtype == np.object:
             char_count = char_count + 1
