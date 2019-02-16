@@ -2,7 +2,7 @@ from distutils.core import setup
 
 setup(
     name='explorePy',
-    version='0.1dev',
+    version='0.1',
     packages=['explorePy',],
     license='LICENSE.txt',
     long_description=open('README.txt').read(),
