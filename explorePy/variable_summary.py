@@ -48,10 +48,8 @@ def variable_summary2(frames):
 
 
 
-    data3 = pd.DataFrame({'Variable type': ["numeric","character", "boolean","date","other"], 'count': [int_count, char_count, bool_count, date_count,other_count] })
-
-
+    data = pd.DataFrame({'Variable type': ["numeric","character", "boolean","date","other"], 'count': [int_count, char_count, bool_count, date_count,other_count] })
 
     #print out a data frame
 
-    print(data3)
+    print(data)
