@@ -3,7 +3,7 @@ import pandas as pd
 
 
 
-def variable_summary2(frames):
+def variable_summary(frames):
     """
     takes a data frame as input and provides the total quantity of each type of variable present in the data frame
     inputs:
