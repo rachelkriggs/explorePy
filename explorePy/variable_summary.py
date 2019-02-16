@@ -11,9 +11,6 @@ def variable_summary2(frames):
     returns:
     data frame - variable type and count of each type
     """
-    #https://stackoverflow.com/questions/19900202/how-to-determine-whether-a-column-variable-is-numeric-or-not-in-pandas-numpy
-    #pandas data types
-    #https://pbpython.com/pandas_dtypes.html
 
     #holds the list of values of the column names
     cols = list(frames.columns.values)
@@ -27,7 +24,7 @@ def variable_summary2(frames):
     bool_count = 0
     date_count = 0
     other_count = 0
-
+    # performs the count
     for i in range (0, col_len):
         if frames[cols[i]].dtype == np.int64:
             int_count = int_count + 1
@@ -47,7 +44,7 @@ def variable_summary2(frames):
 
 
 
-    data = pd.DataFrame({'Variable type': ["numeric","character", "boolean","date","other"], 'count': [int_count, char_count, bool_count, date_count,other_count] })
+    data = pd.DataFrame({'Variable type': ["numeric","string", "boolean","date","other"], 'count': [int_count, char_count, bool_count, date_count,other_count] })
 
     #print out a data frame
 
