@@ -18,17 +18,17 @@ frames = pd.DataFrame({'index': [1, 2, 3, 4], 'letters': ["a","b", "c","d"],
 #input is data frame
 
 
-def test_correct_input():
-    assert isinstance(frames, pd.DataFrame)
+def test_correct_input(x):
+    assert isinstance(x, pd.DataFrame),  "Input is not a pandas data frame"
 
 
 # test that variable is a string, missing_values is an integer and percent_missing is float
 
-def test_column_type_integer_variable():
-    assert np.issubdtype(frames['variable'].dtype, np.character)
+def test_column_type_integer_variable(x):
+    assert np.issubdtype(x['variable'].dtype, np.character),"Input is not a pandas data frame"
 
-def test_column_type_integer_missing_values():
-    assert np.issubdtype(frames['missing_values'].dtype, np.number)
+def test_column_type_integer_missing_values(x):
+    assert np.issubdtype(x['missing_values'].dtype, np.int64), "missing vales column should be a number"
 
-def test_column_type_float_size_in_percent_missing():
-    assert np.issubdtype(frames['size_in_memory'].dtype, np.float)
+def test_column_type_float_size_in_percent_missing(x):
+    assert np.issubdtype(x['size_in_memory'].dtype, np.int64), "size in memory column should be a number"
