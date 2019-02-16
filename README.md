@@ -18,7 +18,7 @@ example output of `variable_summary`:
 | variable_type | count |
 | ------------- | ----- |
 | numeric       | 5     |
-| character     | 4     |
+| string        | 4     |
 | boolean       | 1     |
 | date          | 0     |
 | other         | 1     |
