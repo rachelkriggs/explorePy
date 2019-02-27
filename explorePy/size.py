@@ -24,6 +24,6 @@ def size(x):
     # Create the results dataframe
     result_df = pd.DataFrame({'rows': [number_of_rows],
                               'columns' : [number_of_columns],
-                              'size_in_byes' : [total_bytes_used]})
+                              'size_in_bytes' : [total_bytes_used]})
 
     return result_df

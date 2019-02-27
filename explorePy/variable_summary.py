@@ -36,12 +36,10 @@ def variable_summary(frames):
             date_count = date_count + 1
         else:
             other_count = other_count + 1
-    print(char_count)
+    #print(char_count)
 
-
-
-    result_df = pd.DataFrame({'Variable type': ["numeric","string", "boolean","date","other"], 'count': [int_count, char_count, bool_count, date_count,other_count] })
+    result_df = pd.DataFrame({'variable_type': ["numeric","string", "boolean","date","other"], 'count': [int_count, char_count, bool_count, date_count,other_count] })
 
     #print out a data frame of the summary results
 
-    print(result_df)
+    return(result_df)

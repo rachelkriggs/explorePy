@@ -1,39 +1,44 @@
-
 import pytest
 import numpy as np
 import pandas as pd
+import os
+import sys
 
+# By default, python only searches for packages and modules to import
+# from the directories listed in sys.path
+# The idea is to add another path that inlcudes the function we want to test
+# This allows us to import that function
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath("../explorePy"))))
 
-# Creating the test data frame
+# Now that we have added the path, we can import the function we want to test
+from explorePy.explorePy.size import size
 
-
-
+# Dummy input DataFrame
 frames = pd.DataFrame({'index': [1, 2, 3, 4], 'letters': ["a","b", "c","d"],
                    'numbers': [1, 2, 3, 4], 'booleans': [True, False, False, True]})
 
-# Test that checks input is data frames
+# Let's get the output of our function with the test DataFrame
+result_df = size(frames)
 
-# Tests for the output size data frame
+# Test to check if the input to our function is a DataFrame
+def test_correct_input():
+    assert isinstance(frames, pd.DataFrame), "Input is not DataFrame"
 
-# input is data frame
+# Test to check output dimensions of DataFrame
+def test_output_size():
+    assert result_df.shape == (1,3), "The data frame should be 1 by 3"
 
+# Test to check if the number of rows of the input DataFrame is reported as
+# numeric
+def test_column_type_numeric_rows():
+    assert pd.api.types.is_numeric_dtype(result_df['rows']), "'rows' column data is not numeric"
 
-def test_correct_input(x):
-    assert isinstance(x, pd.DataFrame), "The input is not a data frame"
+# Test to check if the number of columns of the input DataFrame is reported as
+# numeric
+def test_column_type_numeric_columns():
+    assert pd.api.types.is_numeric_dtype(result_df['columns']), "'columns' column data is not numeric"
 
-#outputs are correct data frame dimensions
-
-def test_output_size(x):
-    assert x.shape == (1,3), "The data frame should be 1 by 3"
-
-
-# test that rows is an integer and columns is an integer and size in memory is float
-
-def test_column_type_integer_rows(x):
-    assert np.issubdtype(x['letters'].dtype, np.object), "letters column should be an object type"
-
-def test_column_type_integer_columns(x):
-    assert np.issubdtype(x['columns'].dtype, np.int64), "letters column should be an integer type"
-
-def test_column_type_float_size_in_memory(x):
-    assert np.issubdtype(x['size_in_memory'].dtype, np.float64),"size_in_memory column should be an integer type"
+# Test to check if the size in memory of the input DataFrame is reported as
+# numeric
+def test_column_type_numeric_size():
+    assert pd.api.types.is_numeric_dtype(result_df['size_in_bytes']), "'size_in_bytes' column data is not numeric"
