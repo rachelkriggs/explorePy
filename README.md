@@ -45,7 +45,7 @@ example output of `size`:
 | ----- | ------- | -------------- |
 | 1690  | 27      | 1.4 MB         |
 
-### Comparable Functions Available in the Python Ecosystems
+### Comparable Functions Available in the Python Ecosystem
 The following are existing functions in Python that are similar to those developed within our project.
 
 [df.info()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.info.html): provides summary information about a pandas dataframe, including data types for variables and number of null values.   
