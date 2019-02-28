@@ -8,10 +8,10 @@ import sys
 # from the directories listed in sys.path
 # The idea is to add another path that inlcudes the function we want to test
 # This allows us to import that function
-sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath("../explorePy"))))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath("./explorePy"))))
 
 # Now that we have added the path, we can import the function we want to test
-from explorePy.explorePy.size import size
+from explorePy.size import size
 
 # Dummy input DataFrame
 frames = pd.DataFrame({'index': [1, 2, 3, 4], 'letters': ["a","b", "c","d"],
