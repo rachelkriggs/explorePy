@@ -6,8 +6,8 @@ language: python
 
 # Set the python version to 3.5
 python:
-  - "3.5"
-  - "3.6"
+  - 3.5
+  - 3.6
 
 # Install the codecov pip dependency
 install:
@@ -15,7 +15,7 @@ install:
 
 # Run the unit test
 script:
-  - coverage run -m --branch pytest
+  - coverage run -m --branch pytest -q test_missing_values.py test_size.py test_variable_summay.py
 
 # Push the results back to codecov
 after_success:
