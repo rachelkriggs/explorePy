@@ -12,10 +12,12 @@ python:
 # Install the codecov pip dependency
 install:
   - pip install codecov
+  - pip install coverage
 
 # Run the unit test
 script:
-  - coverage run -m --branch pytest -q test_missing_values.py test_size.py test_variable_summay.py
+  - python -m pytest --cov=./
+  #- coverage run -m --branch pytest
 
 # Push the results back to codecov
 after_success:
