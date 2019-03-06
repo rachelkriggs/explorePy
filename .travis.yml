@@ -7,14 +7,15 @@ python:
 
 # Install the codecov pip dependency
 install:
-  #- pip install --user pandas
-  #- pip install --user codecov
+  - pip install git+https://github.com/UBC-MDS/explorePy.git
+  - pip install -U pytest
+  - pip install pandas
   #- pip install coverage
 
 # Run the unit test
 script:
-  #- python
-
+  - cd explorePy/tests/
+  - pytest
 # Push the results back to codecov
 after_success:
   #- codecov
