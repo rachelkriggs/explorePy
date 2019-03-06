@@ -1,5 +1,7 @@
 # explorePy
 
+[![Coverage status](https://codecov.io/gh/UBC-MDS/explorePy/branch/master/graph/badge.svg)](https://codecov.io/github/UBC-MDS/explorePy?branch=master)
+
 [![Build Status](https://travis-ci.org/UBC-MDS/explorePy.svg?branch=master)](https://travis-ci.org/UBC-MDS/explorePy)
 
 ### A Collaborative Software Development Project
