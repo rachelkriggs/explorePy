@@ -8,14 +8,14 @@ python:
 # Install the codecov pip dependency
 install:
   - pip install git+https://github.com/UBC-MDS/explorePy.git
-  - pip install -U pytest
+  - pip install -U pytest pytest-cov
   - pip install pandas
   - pip install codecov
 
 # Run the unit test
 script:
   #- cd explorePy/tests
-  - pytest
+  - pytest --cov=./
 # Push the results back to codecov
 after_success:
   - codecov
