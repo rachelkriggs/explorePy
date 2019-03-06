@@ -11,11 +11,12 @@ install:
   - pip install -U pytest pytest-cov
   - pip install pandas
   - pip install codecov
+  #- pip install coverage
 
 # Run the unit test
 script:
   #- cd explorePy/tests
-  - pytest --cov=./
+  - pytest --cov=./tests
 # Push the results back to codecov
 after_success:
   - codecov
