@@ -7,14 +7,14 @@ python:
 
 # Install the codecov pip dependency
 install:
-  - pip install pandas
-  - pip install codecov
+  #- pip install --user pandas
+  #- pip install --user codecov
   #- pip install coverage
 
 # Run the unit test
 script:
-  - coverage run tests/test_size.py
+  #- python
 
 # Push the results back to codecov
 after_success:
-  - codecov
+  #- codecov
