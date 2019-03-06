@@ -1,22 +1,21 @@
-#  Disable sudo to speed up the build
-sudo: false
-
 # Set the build language to Python
 language: python
 
 # Set the python version to 3.5
 python:
-  "3.5"
-  "3.6"
+  - "3.6"
 
 # Install the codecov pip dependency
 install:
-  - pip install codecov
+  - pip install git+https://github.com/UBC-MDS/explorePy.git
+  - pip install -U pytest
+  - pip install pandas
+  #- pip install coverage
 
 # Run the unit test
 script:
-  - coverage run -m --branch pytest
-
+  #- cd explorePy/tests
+  - pytest
 # Push the results back to codecov
 after_success:
-  - codecov
+  #- codecov

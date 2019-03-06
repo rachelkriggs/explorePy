@@ -1,5 +1,7 @@
 # explorePy
 
+[![Build Status](https://travis-ci.org/UBC-MDS/explorePy.svg?branch=master)](https://travis-ci.org/UBC-MDS/explorePy)
+
 ### A Collaborative Software Development Project
 
 February 2019
