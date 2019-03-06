@@ -14,7 +14,7 @@ install:
 
 # Run the unit test
 script:
-  - cd explorePy/tests/
+  - cd explorePy/tests
   - pytest
 # Push the results back to codecov
 after_success:
