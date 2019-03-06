@@ -16,7 +16,7 @@ install:
 # Run the unit test
 script:
   #- cd explorePy/tests
-  - pytest --cov=explorepy /tests
+  - pytest --cov=./tests
 # Push the results back to codecov
 after_success:
   - codecov
