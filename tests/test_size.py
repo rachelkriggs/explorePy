@@ -14,8 +14,13 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.realpath("./explorePy"))
 from explorePy.size import size
 
 # Dummy input DataFrame
-frames = pd.DataFrame({'index': [1, 2, 3, 4], 'letters': ["a","b", "c","d"],
-                   'numbers': [1, 2, 3, 4], 'booleans': [True, False, False, True]})
+frames = pd.DataFrame({'letters': ["a","b", np.nan,"d"],
+                       'numbers': [1.0, 2.0, 3.0, np.nan],
+                       'booleans': [np.nan, False, np.nan, True],
+                       'dates': [np.datetime64("2003-01-02"), np.datetime64("2002-02-02"),
+                                 np.datetime64("2004-03-03"), np.datetime64("2005-04-04")],
+                       'integers': [2, 3, 4, 5]
+                      })
 
 # Let's get the output of our function with the test DataFrame
 result_df = size(frames)
