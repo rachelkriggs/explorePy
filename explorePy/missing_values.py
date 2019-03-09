@@ -12,6 +12,16 @@ def missing_values(x):
 
     returns:
     data frame - variables, count of missing values and proportion of values that are missing
+
+    example usage:
+
+    Using this toy data_frame
+    frames = pd.DataFrame({'names': ["Rachel","Jim", "Arzan","Milos"],
+                           'numbers': [2, 4, 6, 8],
+                           'truths': [True, True, True, False],
+                          })
+
+    missing_values(frames)
     """
 
     # Create an empty list to store the count and percentages of NAs in each column
