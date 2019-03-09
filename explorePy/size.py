@@ -12,6 +12,16 @@ def size(x):
 
     returns:
     data frame - number of rows, number of columns and memory size of data frame
+
+    example usage:
+
+    Using this toy data_frame
+    frames = pd.DataFrame({'names': ["Rachel","Jim", "Arzan","Milos"],
+                           'numbers': [2, 4, 6, 8],
+                           'truths': [True, True, True, False],
+                          })
+
+    size(frames)    
     """
     # Calculate the number of rows and columns
     try:

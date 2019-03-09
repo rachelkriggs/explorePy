@@ -6,10 +6,22 @@ import datetime
 def variable_summary(frames):
     """
     takes a data frame as input and provides the total quantity of each type of variable present in the data frame
+
     inputs:
     frames: data frame
+
     returns:
     data frame - variable type and count of each type
+
+    example usage:
+
+    Using this toy data_frame
+    frames = pd.DataFrame({'names': ["Rachel","Jim", "Arzan","Milos"],
+                           'numbers': [2, 4, 6, 8],
+                           'truths': [True, True, True, False],
+                          })
+
+    variable_summary(frames)    
     """
 
     try:
